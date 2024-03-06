@@ -18,13 +18,13 @@ const DemoUseState = () => {
   //       <button onClick={changeColor}>Change Background Color</button>
   //     </div>
   //   );
-  const [color, setColor] = useState(false);
-  console.log(color);
+  const [isVisibleColor, setIsVisibleColor] = useState(false);
+  console.log(isVisibleColor);
   const changeColor = () => {
-    setColor((color) => !color);
+    setIsVisibleColor((color) => !color);
   };
   return (
-    <div style={{ backgroundColor: color ? "red" : "green" }}>
+    <div style={{ backgroundColor: isVisibleColor ? "red" : "green" }}>
       <button onClick={changeColor}>Change Background Color</button>
     </div>
   );
